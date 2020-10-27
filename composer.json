@@ -1,0 +1,41 @@
+{
+    "name": "alarm-dog/noticer",
+    "description": "哮天犬告警平台通知组件",
+    "type": "library",
+    "authors": [
+        {
+            "name": "ethananony",
+            "email": "ethananony@aliyun.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dog\\Noticer\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "swiftmailer/swiftmailer": "^6.2",
+        "hyperf/guzzle": "^1.1 || ^2.0",
+        "hyperf/redis": "^1.1 || ^2.0"
+    },
+    "suggest": {
+        "hyperf/view": "Required to use send view by email channel.",
+        "duncan3dc/blade": "Required to use send the view of the blade engine by email channel.",
+        "smarty/smarty": "Required to use send the view of the smarty engine by email channel.",
+        "twig/twig": "Required to use send the view of the twig engine by email channel.",
+        "league/plates": "Required to use send the view of the plates engine by email channel.",
+        "sy-records/think-template": "Required to use send the view of the think-template engine by email channel."
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Dog\\Noticer\\HyperfConfigProvider"
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1"
+    }
+}
